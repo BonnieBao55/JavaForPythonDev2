@@ -44,7 +44,7 @@ public class Startup {
 
         Student student = new Student();
         student.major = Major.ComputerScience;
-        student.name = "Boonie";
+        student.name = "Bonnie";
         student.dateOfBirth = LocalDate.of(1988,6,6);
         System.out.println(student);
         System.out.println(student.getAge());
@@ -64,43 +64,71 @@ public class Startup {
         car1.setHorsePower(14);
         car1.setCarStyle(CarStyle.SUV);
         car1.setPowerType(PowerType.UNLEADED);
+        car1.HONK();
+        car1.Drive(500);
 
-        Car car2 = new Car();
+        Car car2 = new Car(Model.FOUR_RUNNER, Make.TOYOTA, 2020);
 
-        Car car3 = new Car();
 
+        Car car3 = new Car(Model.CRV, Make.HONDA, 2015);
+        car3.setHorsePower(195);
+  
+  
+        System.out.println("Number of cars on the road" + Car.numberOfCars);
+  
+  
+        Car car4 = new Car(Model.ACENT, Make.SUBARU, 2021);
+        System.out.println("Car 4 name" + car4.carName);
+  
+  
         System.out.println(car1.getHorsePower());
         System.out.println(car2.getHorsePower());
         System.out.println(car3.getHorsePower());
+  
+  
+  
+  
 
-        instructor teacher = new instructor();
-        teacher.email = "abc@gmail.com";
-        instructor teacher2 = new instructor();
-
-    }
-
-    public static double harmonic(int n) {
-        int local = 0;
-        System.out.println(local);
-
-        return n;
-        
-    }
-
-
-public static int getVowels(String term) {
-    String lowerCased = term.toLowerCase();
-    int counter = 0;
-    for (int i = 0; i < term.length();i++){
-        char letter = lowerCased.charAt(i);
-    
-        if (letter == 'a' || letter == 'e' || letter == 'i' || letter =='o' || letter =='u') {
-            counter++;
-        } 
-    }
-    return counter;
-}
-}
-
-    
-
+      }
+      public static double harmonic(int n){
+          int local = 0;
+          System.out.println(local);
+  
+  
+          for(int i = 0; i < 3; i++){
+              int forLoopLocal = 1;
+              System.out.println(forLoopLocal);
+          }
+          return n;
+      }
+          public static int countVowels(String input){
+              input = input.toLowerCase();
+  
+  
+              int count = 0;
+              for(int i = 0; i < input.length(); i++){
+                  char ch = input.charAt(i);
+                  if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'){
+                      count++;
+                  }
+              
+              }
+              return count;
+          }
+          // public static int getVowels(String term){
+              
+          //     for(int i = 0; i < term.length(); i++){
+          //         char letter = term.charAt(i);
+  
+  
+          //         if(letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u'){
+  
+  
+          //         }
+          //     }
+          // }
+          
+              
+      
+      
+  }
